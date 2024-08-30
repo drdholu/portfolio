@@ -113,7 +113,7 @@ const info = {
     "Contact": {
       "description": "hit me up, i don't bite :)",
       "details": {
-        "phone": "+91-84212-70069",
+        "phone": "+91 84212 70069",
         "location": "Pune, India",
         "linkedin": "linkedin.com/in/parasdhole",
         "github": "github.com/drdholu"
