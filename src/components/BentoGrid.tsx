@@ -1,12 +1,5 @@
 import React from "react";
 import { BentoGrid, BentoGridItem } from "./ui/bento-grid";
-import {
-  IconCode,
-  IconBriefcase,
-  IconSchool,
-  IconDeviceLaptop,
-  IconHeartHandshake,
-} from "@tabler/icons-react";
 import { EvervaultCard } from "./ui/evervault-card";
 import info from "../data/info"
 
@@ -31,13 +24,9 @@ export function BentoGridDemo() {
 // const Skeleton = () => (
 //   <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"></div>
 // );
-const Skeleton = ({ icon }: { icon: React.ReactNode }) => (
-  <EvervaultCard text={
-    <div className="flex items-center justify-center w-full h-full">
-      {icon}
-    </div>
-  } />
-);
+// const Skeleton = ({ icon }: { icon: React.ReactNode }) => (
+//     <EvervaultCard text={icon} />
+// );
 
 const items = [
   {

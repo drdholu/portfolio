@@ -12,11 +12,9 @@ import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 
 
 const Skeleton = ({ icon }: { icon: React.ReactNode }) => (
-  <EvervaultCard text={
-    <div className="flex items-center justify-center w-full h-full">
-      {icon}
-    </div>
-  } />
+  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-transparent">
+    <EvervaultCard text={icon} />
+  </div>
 );
 
 const info = {
