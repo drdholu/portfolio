@@ -11,11 +11,13 @@ const Page = () => {
         {info.Skills.details.map((skill, idx) => (
           <div key={idx} className='mb-5'>
             <h2 className='text-3xl mb-2'>{skill.name}</h2>
+            <div className='flex flex-row flex-wrap'>
               {skill.technologies.map((tech, techIdx) => (
-                <span key={techIdx} className='mr-2'>
+                <span key={techIdx} className='m-1 '>
                   <ShimmerButton text={tech}></ShimmerButton>
                 </span>
               ))}
+            </div>
           </div>
         ))}
       </div>

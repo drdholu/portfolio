@@ -28,11 +28,13 @@ const Page = () => {
               )}
           </div>
           <p className='mb-2'>{project.description}</p>
-          {project.technologies.map((tech, id) => (
-            <span className='mr-2' key={id}>
-              <ShimmerButton text={tech}></ShimmerButton>
-            </span>
-          ))}
+          <div className='flex flex-wrap'>
+            {project.technologies.map((tech, id) => (
+              <span className='m-1' key={id}>
+                <ShimmerButton text={tech}></ShimmerButton>
+              </span>
+            ))} 
+          </div>
         </div>
       ))}
     </PageContainer>
