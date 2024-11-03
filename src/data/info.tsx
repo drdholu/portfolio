@@ -41,6 +41,13 @@ const info = {
       "description": "Significant projects demonstrating experience and expertise in various technologies.",
       "details": [
         {
+          "name": "Impressions 24, COEP",
+          "status": "Ongoing",
+          link: "https://coepimpressions.org/",
+          "description": "Designed the official website of Impressions, a cultural fest conducted in COEP.",
+          "technologies": ["ReactJS", "ThreeJS", "GSAP", "Framer Motion"]
+        },
+        {
           "name": "Unified Student Portal",
           "status": "Ongoing",
           "link": "",
@@ -68,13 +75,6 @@ const info = {
           "description": "Contributed to the backend for the official merit list generation",
           "technologies": ["ReactJS", "NodeJS", "MongoDB", "ExpressJS"]
         },
-        {
-          "name": "Impressions, COEP",
-          "status": "Completed",
-          link: "https://www.impressionscoeptech.com/",
-          "description": "Designed the official website of Impressions, a cultural fest conducted in COEP.",
-          "technologies": ["HTML", "CSS", "JavaScript"]
-        },
       ],
       header: <Skeleton icon={<IconDeviceLaptop className="h-6 w-6 text-neutral-500" />}/>,
       link: "/projects"
@@ -90,7 +90,16 @@ const info = {
             "Developing the Student Portal using the MERN stack.",
             "Contributing to merit list generation and student seat allocation algorithms for COEP’s MTech admission portal."
           ]
-        }
+        },
+        {
+          "position": "Web Head",
+          "organization": "Impressions, COEP Pune",
+          "duration": "Oct 2024 - Present",
+          "responsibilities": [
+            "Responsible for designing upto 6 pages for Impressions 2023 using plain HTML, CSS & JS",
+            "Currently managing the Impressions 24 site using React for frontend and GSAP & ThreeJS to improve overall user interactivity and design."
+          ]
+        },
       ],
       header: <Skeleton icon={<IconBriefcase className="h-6 w-6 text-neutral-500" />} />,
       link: "/positions"
