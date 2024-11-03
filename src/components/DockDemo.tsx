@@ -62,7 +62,7 @@ const Icons = {
 
 const DATA = {
   navbar: [
-    { href: "#", icon: HomeIcon, label: "Home" },
+    // { href: "#", icon: HomeIcon, label: "Home" },
     { href: "/blog", icon: PencilIcon, label: "Blog" },
   ],
   contact: {
@@ -139,8 +139,8 @@ export function DockDemo() {
               </Tooltip>
             </DockIcon>
           ))}
-          <Separator orientation="vertical" className="h-full py-2" />
-          <DockIcon>
+          {/* <Separator orientation="vertical" className="h-full py-2" /> */}
+          {/* <DockIcon>
             <Tooltip>
               <TooltipTrigger asChild>
                 <ModeToggle className="rounded-full" />
@@ -149,7 +149,7 @@ export function DockDemo() {
                 <p>Theme</p>
               </TooltipContent>
             </Tooltip>
-          </DockIcon>
+          </DockIcon> */}
         </Dock>
       </div>
     </TooltipProvider>
