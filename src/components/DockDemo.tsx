@@ -63,7 +63,7 @@ const Icons = {
 const DATA = {
   navbar: [
     { href: "#", icon: HomeIcon, label: "Home" },
-    { href: "#", icon: PencilIcon, label: "Blog" },
+    { href: "/blog", icon: PencilIcon, label: "Blog" },
   ],
   contact: {
     social: {
@@ -95,7 +95,6 @@ export function DockDemo() {
   return (
     <TooltipProvider>
       <div className="relative">
-        
         <Dock direction="middle">
           {DATA.navbar.map((item) => (
             <DockIcon key={item.label}>
