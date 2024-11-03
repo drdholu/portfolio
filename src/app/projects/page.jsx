@@ -9,34 +9,38 @@ import { LinkPreview } from "@/components/ui/link-preview";
 const Page = () => {
   return (
     <PageContainer title='Projects'>
-      {info.Projects.details.map((project, idx) => (
-        <div key={idx} className='mb-5'>
-          <div className='flex mb-2 items-center gap-5'>
-            <p className='text-3xl'>
-              <LinkPreview url={project.link} className="font-bold">
-                {project.name}
-              </LinkPreview>
-            </p>
-            {project.status === 'Ongoing' ? (
-                <span className="relative flex h-3 w-3">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
-                </span>
-              ) : (
-                // <p>{project.status}</p>
-                null
-              )}
+      <div className="grid gap-6">
+        {info.Projects.details.map((project, idx) => (
+          <div 
+            key={idx} 
+            className='p-6 rounded-lg backdrop-blur-sm 
+                     hover:bg-white/10 transition-all duration-300 
+                     border border-gray-800/20 shadow-sm'
+          >
+            <div className="space-y-2 mb-4">
+              <div className='flex items-center gap-5'>
+                <p className='text-2xl'>
+                  <LinkPreview url={project.link} className="font-bold">
+                    {project.name}
+                  </LinkPreview>
+                </p>
+                {project.status === 'Ongoing' && (
+                  <span className="relative flex h-3 w-3">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                  </span>
+                )}
+              </div>
+              <p className='text-gray-300'>{project.description}</p>
+            </div>
+            <div className='flex flex-wrap gap-2'>
+              {project.technologies.map((tech, id) => (
+                <ShimmerButton key={id} text={tech} />
+              ))}
+            </div>
           </div>
-          <p className='mb-2'>{project.description}</p>
-          <div className='flex flex-wrap'>
-            {project.technologies.map((tech, id) => (
-              <span className='m-1' key={id}>
-                <ShimmerButton text={tech}></ShimmerButton>
-              </span>
-            ))} 
-          </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </PageContainer>
   )
 }
