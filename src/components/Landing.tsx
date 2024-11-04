@@ -1,16 +1,19 @@
 "use client";
 import { motion } from "framer-motion";
-// import { HeroHighlight, Highlight } from "./ui/hero-highlight";
-// import { FlipWords } from "./ui/flip-words";
+import { FlipWords } from "./ui/flip-words";
 import { BentoGridDemo } from "./BentoGrid";
 import { DockDemo } from "./DockDemo";
 import { cn } from "@/lib/utils";
 import { BackgroundBeams } from "./ui/background-beams";
+import { AppleCardsCarouselDemo } from "./AppleCardsCarouselDemo";
+import { IconLocation } from "@tabler/icons-react";
+import { MapPin } from "lucide-react";
+
 export function Landing() {
-    // const words = ["mern dev?", "producer", "student"];
+    const words = ["A Web-Developer"];
     return (
         <div className="flex md:flex-row flex-col items-center justify-evenly h-screen p-10">
-            <motion.h1
+            <motion.div
             initial={{
                 opacity: 0,
                 y: 20,
@@ -27,16 +30,26 @@ export function Landing() {
                 duration: 0.5,
                 ease: [0.4, 0.0, 0.2, 1],
             }}
-            className="text-2xl md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug text-left "
+            className="flex flex-col text-3xl md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug text-left"
             >
-            Hi, I&apos;m <br/>
-            <span className="bg-clip-text animate-gradient text-transparent bg-gradient-to-r from-green-400 to-blue-400">Paras Dhole</span>
-            <br />
-            <DockDemo />
-            {/* <Highlight className="">
-                A <FlipWords words={words} /> 
-            </Highlight> */}
-            </motion.h1>
+                <div className="flex flex-col">
+                    Hi, I&apos;m
+                    <span className="text-4xl md:text-5xl bg-clip-text animate-gradient text-transparent bg-gradient-to-r from-green-400 to-blue-400">Paras Dhole</span>                
+                </div>
+                <p className="text-3xl md:text-4xl bg-clip-text text-transparent bg-gradient-to-r from-gray-400 to-gray-200">Fullstack dev</p>
+                {/* <FlipWords words={words} />  */}
+                <motion.div
+                    initial={{opacity: 0, y: -20}}
+                    animate={{opacity: 1, y: 0}}
+                    transition={{delay: 0.35}}
+                >
+                    <div className="mt-4 flex gap-2">
+                        <MapPin/>
+                        <span className="text-lg md:text-xl text-white-500"> Pune, India</span>
+                    </div>
+                    <DockDemo />
+                </motion.div>
+            </motion.div>
             
             <motion.div
             initial={{
@@ -52,7 +65,12 @@ export function Landing() {
                 ease: [0.4, 0.0, 0.2, 1],
             }}
             >
-                <BentoGridDemo />
+                <div className="hidden md:block">
+                    <BentoGridDemo />
+                </div>
+                <div className="md:hidden overflow-hidden w-screen">
+                    <AppleCardsCarouselDemo/>
+                </div>
             </motion.div>
         </div>
     );

@@ -9,11 +9,12 @@ import { DockDemo } from "@/components/DockDemo";
 export default function Home() {
   return (
     <NextUIProvider>
-      <div className="flex flex-col justify-center items-center md:hidden p-4 text-center text-lg h-screen">
+      {/* <div className="flex flex-col justify-center items-center md:hidden p-4 text-center text-lg h-screen">
         will make it responsive soon, for now please visit the site on your pc thanks :)
         <DockDemo />
-      </div>
-      <div className="hidden md:block">
+      </div> */}
+      {/* <div className="hidden md:block"> */}
+      <div className="">
         {/* <Spotlight
           className="-top-40 left-0 md:left-60 md:-top-20"
           fill="white"

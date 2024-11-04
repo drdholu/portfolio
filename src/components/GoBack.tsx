@@ -1,3 +1,4 @@
+'use client'
 import { useRouter } from 'next/navigation';
 import React, { useCallback } from 'react';
 import { IconArrowBack } from "@tabler/icons-react";

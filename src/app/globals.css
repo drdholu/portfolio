@@ -1,7 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Onest&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Onest&display=swap'); */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "PP Object Sans";
+  src: url("../assets/fonts/PPObjectSans/PPObjectSans-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
 
 @layer base {
   :root {
@@ -31,6 +38,10 @@
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
+  }
+
+  * {
+    font-family: "PP Object Sans";
   }
 
   .dark {

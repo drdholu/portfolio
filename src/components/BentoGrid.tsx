@@ -5,7 +5,7 @@ import info from "../data/info"
 
 export function BentoGridDemo() {
   return (
-    <BentoGrid className="max-w-4xl mx-auto">
+    <BentoGrid className="m-5 md:m-0 max-w-4xl mx-auto">
       {items.map((item, i) => (
         <BentoGridItem
           key={i}
