@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { Link as Link2 } from 'next-view-transitions'
 import { CalendarIcon, HomeIcon, MailIcon, PencilIcon } from "lucide-react";
 
 import { cn } from "@/lib/utils";
@@ -100,7 +101,7 @@ export function DockDemo() {
             <DockIcon key={item.label}>
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <Link
+                  <Link2
                     href={item.href}
                     className={cn(
                       buttonVariants({ variant: "ghost", size: "icon" }),
@@ -109,7 +110,7 @@ export function DockDemo() {
                     // rel="noopener noreferrer" target="_blank"
                   >
                     <item.icon className="size-4" />
-                  </Link>
+                  </Link2>
                 </TooltipTrigger>
                 <TooltipContent>
                   <p>{item.label}</p>

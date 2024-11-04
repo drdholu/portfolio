@@ -36,16 +36,17 @@ export function Landing() {
                     Hi, I&apos;m
                     <span className="text-4xl md:text-5xl bg-clip-text animate-gradient text-transparent bg-gradient-to-r from-green-400 to-blue-400">Paras Dhole</span>                
                 </div>
-                <p className="text-3xl md:text-4xl bg-clip-text text-transparent bg-gradient-to-r from-gray-400 to-gray-200">Fullstack dev</p>
                 {/* <FlipWords words={words} />  */}
                 <motion.div
                     initial={{opacity: 0, y: -20}}
                     animate={{opacity: 1, y: 0}}
                     transition={{delay: 0.35}}
                 >
-                    <div className="mt-4 flex gap-2">
-                        <MapPin/>
-                        <span className="text-lg md:text-xl text-white-500"> Pune, India</span>
+                    <div className="flex gap-2 items-center text-2xl md:text-3xl whitespace-nowrap flex-wrap">
+                        {/* <MapPin/> */}a
+                        <p className="bg-clip-text text-transparent bg-gradient-to-r from-gray-400 to-gray-200">fullstack dev</p>
+                        based in
+                        <p className="bg-clip-text text-transparent bg-gradient-to-r from-gray-400 to-gray-200">pune</p>
                     </div>
                     <DockDemo />
                 </motion.div>

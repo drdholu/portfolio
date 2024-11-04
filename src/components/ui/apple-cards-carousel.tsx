@@ -14,7 +14,7 @@ import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import Image, { ImageProps } from "next/image";
 import { Link } from 'next-view-transitions'
-import scene from "../../assets/images/scene.jpg"
+// import scene from "../../assets/images/scene.jpg"
 
 interface CarouselProps {
   items: JSX.Element[];
@@ -171,24 +171,27 @@ export const Card = ({
         <div className="absolute h-full top-0 inset-x-0 bg-gradient-to-b from-black/50 via-transparent to-transparent z-30 pointer-events-none" />
         <div className="relative z-40 p-8">
           <motion.p
-            layoutId={layout ? `category-${card.category}` : undefined}
-            className="text-white text-sm font-semibold md:text-base font-sans text-left"
+        layoutId={layout ? `category-${card.category}` : undefined}
+        className="text-white text-sm font-semibold md:text-base font-sans text-left"
           >
-            {card.category}
+        {card.category}
           </motion.p>
           <motion.p
-            layoutId={layout ? `title-${card.title}` : undefined}
-            className="text-gray-200 text-lg max-w-xs text-left [text-wrap:balance] font-sans mt-2"
+        layoutId={layout ? `title-${card.title}` : undefined}
+        className="text-gray-200 text-lg max-w-xs text-left [text-wrap:balance] font-sans mt-2"
           >
-            {card.title}
+        {card.title}
           </motion.p>
         </div>
-        <BlurImage
-          src={scene}
+        {/* <BlurImage
+          src=""
           alt={card.title}
           fill
           className="object-cover absolute z-10 inset-0 brightness-50"
-        />
+        /> */}
+        {/* <div
+          className="object-cover absolute z-10 inset-0 brightness-75 bg-gradient-to-br from-blue-700 to-green-700"
+        /> */}
       </motion.button>
     </Link>
   );
