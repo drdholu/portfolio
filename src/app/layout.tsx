@@ -1,14 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { HeroHighlight } from "@/components/ui/hero-highlight";
-import { ViewTransitions } from 'next-view-transitions';
+// import { HeroHighlight } from "@/components/ui/hero-highlight";
 import { ThemeProvider } from "@/components/theme-provider";
-// import { AnimatePresence } from "framer-motion";
-// import { PageTransition } from "@/components/PageTransition";
-
+import { ViewTransitions } from "next-view-transitions";
+// import { DockDemo } from "@/components/DockDemo";
 
 export const metadata: Metadata = {
-  title: "Paras' Portfolio",
+  title: "Paras Dhole",
   description: "",
 };
 
@@ -18,23 +16,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-    {/* <ViewTransitions> */}
-    {/* <PageTransition> */}
+      <html lang="en">
+
           <body>
               <ThemeProvider
                 attribute="class"
                 defaultTheme="system"
                 enableSystem
                 disableTransitionOnChange
-              >
+                >
+                <ViewTransitions>
                 {/* <HeroHighlight> */}
                     {children}
                 {/* </HeroHighlight> */}
+                    {/* <DockDemo /> */}
+
+                </ViewTransitions>
               </ThemeProvider>
           </body>
-    {/* </PageTransition> */}
-    {/* </ViewTransitions> */}
         </html>
   );
 }

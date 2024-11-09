@@ -1,12 +1,11 @@
-import { HeroHighlight } from "@/components/ui/hero-highlight";
-import { Spotlight } from "@/components/ui/Spotlight";
-import Image from "next/image";
-import { AnimatePresence, motion } from "framer-motion";
+// import { HeroHighlight } from "@/components/ui/hero-highlight";
+// import Image from "next/image";
+// import { AnimatePresence, motion } from "framer-motion";
 import { Landing } from "@/components/Landing";
 import { NextUIProvider } from "@nextui-org/react";
-import { DockDemo } from "@/components/DockDemo";
-import { Component } from "react";
-import { Router } from "lucide-react";
+// import { Component } from "react";
+// import { Router } from "lucide-react";
+// import { BackgroundBeams } from "@/components/ui/background-beams";
 
 export default function Home() {
   return (
@@ -20,7 +19,7 @@ export default function Home() {
           className="-top-40 left-0 md:left-60 md:-top-20"
           fill="white"
         /> */}
-        <Landing />
+          <Landing />
     </NextUIProvider>
   );
 }

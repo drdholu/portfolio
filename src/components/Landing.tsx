@@ -1,15 +1,8 @@
 "use client";
 import { motion } from "framer-motion";
-// import { FlipWords } from "./ui/flip-words";
 import { BentoGridDemo } from "./BentoGrid";
-import { DockDemo } from "./DockDemo";
+// import { DockDemo } from "./DockDemo";
 import { cn } from "@/lib/utils";
-// import { BackgroundBeams } from "./ui/background-beams";
-// import { AppleCardsCarouselDemo } from "./AppleCardsCarouselDemo";
-// import { IconLocation } from "@tabler/icons-react";
-// import { MapPin } from "lucide-react";
-// import { BentoGridItem } from "./ui/bento-grid";
-// import Image from "next/image";
 
 export function Landing() {
     // const words = ["A Web-Developer"];
@@ -103,10 +96,6 @@ export function Landing() {
 
                     <BentoGridDemo />
                 </div>
-                <DockDemo />
-                {/* <div className="md:hidden overflow-hidden w-screen">
-                    <AppleCardsCarouselDemo/>
-                </div> */}
             </motion.div>
         </div>
     );
