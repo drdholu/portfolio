@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+// import { TransitionLink as Link } from "@/utils/TransitionLink";
 import { Link as Link2 } from 'next-view-transitions'
 import { CalendarIcon, HomeIcon, MailIcon, PencilIcon } from "lucide-react";
 
@@ -95,13 +96,13 @@ const DATA = {
 export function DockDemo() {
   return (
     <TooltipProvider>
-      <div className="relative">
+      <div className="sticky bottom-5 md:bottom-0 z-[100]">
         <Dock direction="middle">
           {DATA.navbar.map((item) => (
             <DockIcon key={item.label}>
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <Link2
+                  <Link
                     href={item.href}
                     className={cn(
                       buttonVariants({ variant: "ghost", size: "icon" }),
@@ -110,7 +111,7 @@ export function DockDemo() {
                     // rel="noopener noreferrer" target="_blank"
                   >
                     <item.icon className="size-4" />
-                  </Link2>
+                  </Link>
                 </TooltipTrigger>
                 <TooltipContent>
                   <p>{item.label}</p>
@@ -123,7 +124,7 @@ export function DockDemo() {
             <DockIcon key={name}>
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <Link
+                  <Link2
                     href={social.url}
                     className={cn(
                       buttonVariants({ variant: "ghost", size: "icon" }),
@@ -132,7 +133,7 @@ export function DockDemo() {
                     rel="noopener noreferrer" target="_blank"
                   >
                     <social.icon className="size-4" />
-                  </Link>
+                  </Link2>
                 </TooltipTrigger>
                 <TooltipContent>
                   <p>{name}</p>

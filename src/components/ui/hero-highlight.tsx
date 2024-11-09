@@ -30,7 +30,7 @@ export const HeroHighlight = ({
   return (
     <div
       className={cn(
-        "relative h-screen group",
+        "relative  group",
         containerClassName
       )}
       onMouseMove={handleMouseMove}
