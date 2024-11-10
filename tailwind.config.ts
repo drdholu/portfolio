@@ -5,7 +5,7 @@ const colors = require("tailwindcss/colors");
 
 /** @type {import('tailwindcss').Config} */
 const config: Config = {
-  darkMode: ["class"],
+  darkMode: "class",
   content: [
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
@@ -19,10 +19,10 @@ const config: Config = {
   prefix: "",
   theme: {
   	fontFamily: {
-		"sans": ["PP Object Sans"],
+  		'sans': ["PP Object Sans"]
   	},
   	container: {
-  		center: true,
+  		center: 'true',
   		padding: '2rem',
   		screens: {
   			'2xl': '1400px'
@@ -112,14 +112,20 @@ const config: Config = {
   				'100%': {
   					transform: 'translateZ(0) rotate(360deg)'
   				}
+  			},
+  			'border-beam': {
+  				'100%': {
+  					'offset-distance': '100%'
+  				}
   			}
   		},
   		animation: {
   			'accordion-down': 'accordion-down 0.2s ease-out',
   			'accordion-up': 'accordion-up 0.2s ease-out',
-  			'shimmer': 'shimmer 2s linear infinite',
+  			shimmer: 'shimmer 2s linear infinite',
   			'shimmer-slide': 'shimmer-slide var(--speed) ease-in-out infinite alternate',
-  			'spin-around': 'spin-around calc(var(--speed) * 2) infinite linear'
+  			'spin-around': 'spin-around calc(var(--speed) * 2) infinite linear',
+  			'border-beam': 'border-beam calc(var(--duration)*1s) infinite linear'
   		}
   	}
   },

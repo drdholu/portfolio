@@ -3,11 +3,13 @@ import { motion } from "framer-motion";
 import { BentoGridDemo } from "./BentoGrid";
 // import { DockDemo } from "./DockDemo";
 import { cn } from "@/lib/utils";
+import { BorderBeam } from "./ui/border-beam";
+import { ModeToggle } from "./ui/mode-toggle";
 
 export function Landing() {
     // const words = ["A Web-Developer"];
     return (
-        <div className="flex md:flex-row flex-col items-center justify-evenly min-h-screen mx-10">
+        <div className="flex md:flex-row flex-col items-center justify-evenly min-h-screen md:py-0 px-16 py-10">
             
             <motion.div
                 initial={{
@@ -25,10 +27,11 @@ export function Landing() {
             >
                 <div className="flex-row md:flex gap-4">
 
-                    <div className="bento-name md:p-0 p-2">
+                    <div className="bento-name relative h-auto w-auto">
+                        <BorderBeam/>
                         <div
                             className={cn(
-                                "h-full row-span-1 rounded-xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 dark:bg-black dark:border-white/[0.2] bg-white border justify-between flex flex-col space-y-4",
+                                "h-full row-span-1 rounded-xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 dark:bg-black dark:border-white/[0.2] border justify-between flex flex-col space-y-4",
                             )}
                         >
                             <motion.div
@@ -50,7 +53,7 @@ export function Landing() {
                                 }}
                                 className="flex flex-col text-xl md:text-2xl lg:text-3xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug text-left"
                             >
-                                {/* <Image src={"../assets/images/scene.jpg"} width={10} alt="scene" className="w-10 h-10 rounded-full"/> */}
+                                
                                 <div className="flex flex-col">
                                     Hi, I&apos;m
                                     <span className="text-2xl md:text-3xl bg-clip-text animate-gradient text-transparent bg-gradient-to-r from-green-400 to-blue-400">Paras Dhole</span>                
@@ -88,8 +91,11 @@ export function Landing() {
                                         >
                                             Download Resume
                                         </motion.a>
+                                        <ModeToggle/>
                                     </div>                                    
                                 </motion.div>
+
+
                             </motion.div>
                         </div>
                     </div>
