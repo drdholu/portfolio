@@ -28,7 +28,7 @@ export function Landing() {
                 <div className="flex-row md:flex gap-4">
 
                     <div className="bento-name relative h-auto w-auto">
-                        <BorderBeam/>
+                        {/* <BorderBeam/> */}
                         <div
                             className={cn(
                                 "h-full row-span-1 rounded-xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 dark:bg-black dark:border-white/[0.2] border justify-between flex flex-col space-y-4",
